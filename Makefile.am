@@ -8,4 +8,4 @@ profiledir = $(sysconfdir)/profile.d
 profile_DATA = $(conffile)
 
 $(conffile):
-	echo 'export GCONV_PATH="$(libdir)/gconv/aribb24:$${GCONV_PATH}"' > $@
+	echo 'export GCONV_PATH="$(libdir)/gconv/aribb24$${GCONV_PATH:+:$$GCONV_PATH}"' > $@
